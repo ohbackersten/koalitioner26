@@ -48,6 +48,7 @@ h1{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font
   line-height:1;margin:0 .08em;vertical-align:baseline;box-shadow:inset 0 0 0 1px rgba(128,128,128,.22)}
 
 /* seat bar */
+.seats-card{margin-top:40px}
 .barwrap{position:relative;margin-top:36px}
 .bar{display:flex;gap:2px;height:56px;border-radius:12px;overflow:hidden}
 .seg{min-width:0;background:var(--p);color:var(--pf);display:flex;flex-direction:column;align-items:center;
@@ -160,33 +161,12 @@ footer a{color:inherit}
 <main class="wrap">
 
 <header>
-  <div class="kicker"><span>Riksdagen efter valet 2026</span><span id="badge" class="badge" hidden>Eget scenario</span></div>
+  <div class="kicker"><span>Riksdagen 2026–2030</span><span id="badge" class="badge" hidden>Eget scenario</span></div>
   <h1>Vilka majoriteter går att bilda?</h1>
   <p class="lede">Det har visat sig vara svårt att bilda ett regeringsunderlag efter riksdagsvalet 2026. En majoritet av ledamöterna (175+) behöver tolerera en regering för att den ska tillträda. Matematiskt finns det <strong id="introN">128</strong> kombinationer av partier som utgör en sådan majoritet. Men med villkor för vilka partier som kan samarbeta med varandra blir det betydligt färre. På denna sida kan du se hur många majoriteter som faktiskt kan bildas med vissa villkor, och vad som händer om du lägger till dina egna.</p>
 </header>
 
 <noscript><p>Den här sidan kräver JavaScript.</p></noscript>
-
-<section class="card" aria-labelledby="h-seats">
-  <div class="card-h">
-    <h2 id="h-seats">Mandatfördelning</h2>
-    <span class="sub" id="meta"></span>
-  </div>
-  <div class="barwrap">
-    <div class="bar" id="bar" role="img" aria-label="Mandatfördelning i riksdagen"></div>
-    <div class="tick"><span id="tickLabel"></span></div>
-  </div>
-  <div class="stats" id="stats"></div>
-
-  <details class="adj">
-    <summary>Justera mandat (scenario)</summary>
-    <div class="seatgrid" id="seatGrid"></div>
-    <div class="adj-foot">
-      <span id="seatTotal"></span>
-      <button class="btn ghost" type="button" id="resetSeats">Återställ till valresultatet</button>
-    </div>
-  </details>
-</section>
 
 <section class="card" aria-labelledby="h-rules">
   <div class="card-h">
@@ -217,6 +197,27 @@ footer a{color:inherit}
   </div>
   <p class="res-note" id="resNote"></p>
   <div id="results"></div>
+</section>
+
+<section class="card seats-card" aria-labelledby="h-seats">
+  <div class="card-h">
+    <h2 id="h-seats">Mandatfördelning</h2>
+    <span class="sub" id="meta"></span>
+  </div>
+  <div class="barwrap">
+    <div class="bar" id="bar" role="img" aria-label="Mandatfördelning i riksdagen"></div>
+    <div class="tick"><span id="tickLabel"></span></div>
+  </div>
+  <div class="stats" id="stats"></div>
+
+  <details class="adj">
+    <summary>Justera mandat (scenario)</summary>
+    <div class="seatgrid" id="seatGrid"></div>
+    <div class="adj-foot">
+      <span id="seatTotal"></span>
+      <button class="btn ghost" type="button" id="resetSeats">Återställ till valresultatet</button>
+    </div>
+  </details>
 </section>
 
 <footer>
